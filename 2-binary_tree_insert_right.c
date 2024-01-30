@@ -22,7 +22,6 @@ new_node->n = value;
 new_node->parent = parent;
 new_node->left = NULL;
 new_node->right = NULL;
-/* If the parent already has a right child, set new_node as the right child and update parent */
 if (parent->right != NULL)
 {
 new_node->right = parent->right;
