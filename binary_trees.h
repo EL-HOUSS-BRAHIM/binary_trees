@@ -87,3 +87,46 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 void binary_tree_print(const binary_tree_t *);
 /* Task 19 */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
+/* Task 20 */
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+/* Task 21 */
+
+/* Task 22 */
+
+/* Task 23 */
+
+/* Task 24 */
+
+/* Task 25 */
+
+/* Task 26 */
+
+/* Task 27 */
+
+/* Task 28 */
+
+/* Task 29 */
+
+/* Task 30 */
+
+/* Task 31 */
+
+/* Task 32 */
+
+/* Task 33 */
+
+/* Task 34 */
+
+/* Task 35 */
+
+/* Task 36 */
+
+/* Task 37 */
+
+/* Task 38 */
+
+/* Task 39 */
+
+/* Task 40 */
+
+/* Task 41 */
