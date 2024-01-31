@@ -92,41 +92,39 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 /* Task 21 */
 int binary_tree_is_complete(const binary_tree_t *tree);
 /* Task 22 */
-
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 /* Task 23 */
-
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 /* Task 24 */
-
+int binary_tree_is_bst(const binary_tree_t *tree);
 /* Task 25 */
-
+bst_t *bst_insert(bst_t **tree, int value);
 /* Task 26 */
-
+bst_t *array_to_bst(int *array, size_t size);
 /* Task 27 */
-
+bst_t *bst_search(const bst_t *tree, int value);
 /* Task 28 */
-
+bst_t *bst_remove(bst_t *root, int value);
 /* Task 29 */
 
 /* Task 30 */
-
+int binary_tree_is_avl(const binary_tree_t *tree);
 /* Task 31 */
-
+avl_t *avl_insert(avl_t **tree, int value);
 /* Task 32 */
-
+avl_t *array_to_avl(int *array, size_t size);
 /* Task 33 */
-
+avl_t *avl_remove(avl_t *root, int value);
 /* Task 34 */
-
-/* Task 35 */
-
+avl_t *sorted_array_to_avl(int *array, size_t size);
 /* Task 36 */
-
+int binary_tree_is_heap(const binary_tree_t *tree);
 /* Task 37 */
-
+heap_t *heap_insert(heap_t **root, int value);
 /* Task 38 */
-
+heap_t *array_to_heap(int *array, size_t size);
 /* Task 39 */
-
+int heap_extract(heap_t **root);
 /* Task 40 */
-
+int *heap_to_sorted_array(heap_t *heap, size_t *size);
 /* Task 41 */
