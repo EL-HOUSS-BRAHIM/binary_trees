@@ -30,10 +30,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
         return (0);
 
     // Calculate the height of the tree
-    while (tree->parent != NULL)
+    while (tree->left != NULL)
     {
         height++;
-        tree = tree->parent;
+        tree = tree->left;
     }
 
     // Calculate the number of perfect nodes for a tree of given height
