@@ -90,7 +90,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 /* Task 20 */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 /* Task 21 */
-
+int binary_tree_is_complete(const binary_tree_t *tree);
 /* Task 22 */
 
 /* Task 23 */

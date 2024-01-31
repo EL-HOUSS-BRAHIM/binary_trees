@@ -1,41 +1,48 @@
+/* File: 102-binary_tree_is_complete.c */
 #include "binary_trees.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
- * binary_tree_levelorder - Goes through a binary tree using level-order traversal.
- * @tree: A pointer to the root node of the tree to traverse.
- * @func: A pointer to a function to call for each node.
+ * binary_tree_is_complete - Checks if a binary tree is complete.
+ * @tree: A pointer to the root node of the tree to check.
  *
- * Description: If `tree` or `func` is NULL, do nothing.
+ * Return: If the tree is complete, 1. Otherwise, 0.
  */
-void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
+int binary_tree_is_complete(const binary_tree_t *tree)
 {
-    binary_tree_t **queue = NULL;
+    const binary_tree_t **queue = NULL;
     size_t front = 0, rear = 0;
+    int null_seen = 0;
 
-    if (tree == NULL || func == NULL)
-        return;
+    if (tree == NULL)
+        return (0);
 
     queue = malloc(sizeof(binary_tree_t *) * 1000);
 
     if (queue == NULL)
-        return;
+        return (0);
 
-    queue[rear++] = (binary_tree_t *)tree;
+    queue[rear++] = tree;
 
     while (front < rear)
     {
-        binary_tree_t *current = queue[front++];
+        const binary_tree_t *current = queue[front++];
 
-        func(current->n);
+        if (current == NULL)
+        {
+            null_seen = 1;
+        }
+        else
+        {
+            if (null_seen)
+            {
+                free(queue);
+                return (0);
+            }
 
-        if (current->left != NULL)
             queue[rear++] = current->left;
-
-        if (current->right != NULL)
             queue[rear++] = current->right;
+        }
     }
 
     free(queue);
+    return (1);
 }
