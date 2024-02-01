@@ -13,7 +13,7 @@ while (tree && tree->parent)
 depth++;
 tree = tree->parent;
 }
-return depth;
+return (depth);
 }
 /**
  * binary_trees_ancestor - Finds the lowest common ancestor of two nodes.
